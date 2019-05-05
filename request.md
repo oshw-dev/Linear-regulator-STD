@@ -11,7 +11,7 @@ Standard linear regulator both for postive and negative fixed voltages.
 
 ## Specifications
 * Voltage: 3.3V 5V 9V 12V -3.3V -5V -9V -12V
-* Ampere: max 500mA
+* Ampere: ~1A
 * Outputs: 1
 * Dropout: n/a
 * Quiescent current: n/a
