@@ -14,10 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L dk_PMIC-Voltage-Regulators-Linear:LM317DCYR U?
+L dk_PMIC-Voltage-Regulators-Linear:LM317DCYR U1
 U 1 1 5CCEED29
 P 5950 2900
-F 0 "U?" H 5950 3187 60  0000 C CNN
+F 0 "U1" H 5950 3187 60  0000 C CNN
 F 1 "LM317DCYR" H 5950 3081 60  0000 C CNN
 F 2 "digikey-footprints:SOT-223-4" H 6150 3100 60  0001 L CNN
 F 3 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flm317" H 6150 3200 60  0001 L CNN
@@ -58,10 +58,10 @@ F 3 "~" H 6850 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0101
 U 1 1 5CCF4CA5
 P 5950 4000
-F 0 "#PWR?" H 5950 3750 50  0001 C CNN
+F 0 "#PWR0101" H 5950 3750 50  0001 C CNN
 F 1 "GND" H 5955 3827 50  0000 C CNN
 F 2 "" H 5950 4000 50  0001 C CNN
 F 3 "" H 5950 4000 50  0001 C CNN
@@ -78,8 +78,9 @@ U 1 1 5CCF7777
 P 5350 3350
 F 0 "C1" H 5465 3396 50  0000 L CNN
 F 1 "100nF" H 5465 3305 50  0000 L CNN
-F 2 "" H 5388 3200 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5388 3200 50  0001 C CNN
 F 3 "~" H 5350 3350 50  0001 C CNN
+F 4 ">=50V" H 0   0   50  0001 C CNN "Description"
 	1    5350 3350
 	1    0    0    -1  
 $EndComp
@@ -175,7 +176,7 @@ L Device:CP C2
 U 1 1 5CD0148C
 P 7150 3450
 F 0 "C2" H 7268 3496 50  0000 L CNN
-F 1 "100uF" H 7268 3405 50  0000 L CNN
+F 1 "47uF" H 7268 3405 50  0000 L CNN
 F 2 "" H 7188 3300 50  0001 C CNN
 F 3 "~" H 7150 3450 50  0001 C CNN
 	1    7150 3450
