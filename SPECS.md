@@ -23,7 +23,7 @@ Texas Instruments **LM317+LM337** for positive and negative rails
 * Dropout: n/a
 * Quiescent current: n/a
 * PSSR: n/a
-* Package: SOT-223
+* Package: SOT-223 or D2PAK−3
 * Form factor: smallest form factor
 * CASTELLATED-TH PCB
 
