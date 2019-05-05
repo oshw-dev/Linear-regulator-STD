@@ -4,24 +4,40 @@
 ## Table of contents
 * [Description](#description)
 * [Specifications](#specifications)
+* [Features](#features)
 * [Additional notes](#additional-notes)
 
 ## Description
 Standard linear regulator both for postive and negative fixed voltages.
 
+Texas Instruments **LM317+LM337** for positive and negative rails
+
+* http://www.ti.com/lit/ds/symlink/lm317.pdf
+* http://www.ti.com/lit/ds/snvs778e/snvs778e.pdf
+
 ## Specifications
-* Voltage: 3.3V 5V 9V 12V -3.3V -5V -9V -12V
-* Ampere: ~ 1A
+* Voltage: Output voltage range adjustable from 1.25V to 37V
+* Ampere: 1.5A max
 * Outputs: 1
 * Dropout: n/a
 * Quiescent current: n/a
 * PSSR: n/a
-* Package: any SMD
+* Package: SOT-223
 * Form factor: smallest form factor
 * CASTELLATED-TH PCB
 
+## Features
+* NPN Darlington output topology provides naturally low output impedance and an output capacitor is optional. 3V
+headroom is recommended (Vi – Vo) to support maximum current and lowest temperature.
+* Over-current and over-temperature shutdown protects the device against overload or damage from operating in excessive heat.
+* When an overload occurs the device shuts down Darlington NPN output stage or reduces the output current to
+prevent device damage. The device will automatically reset from the overload. The output may be reduced or
+alternate between on and off until the overload is removed.
 
 ## Additional notes
+* The device requires up to 3-V headroom (VI – VO) to operate in regulation. The device may drop out and
+OUTPUT voltage will be INPUT voltage minus drop out voltage with less headroom.
+
 The Standard regulator is usually best for AC-powered applications, where the low cost and high load current make it the ideal choice. 
 In AC-powered applications, the voltage across the regulator is usually at least 3V or more, so dropout voltage is not critical.
 
