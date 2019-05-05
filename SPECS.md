@@ -8,9 +8,9 @@
 * [Additional notes](#additional-notes)
 
 ## Description
-Standard linear regulator both for postive and negative fixed voltages.
+Standard linear regulator
 
-Texas Instruments **LM317+LM337** for positive and negative rails
+Texas Instruments **LM317**
 
 * http://www.ti.com/lit/ds/symlink/lm317.pdf
 * http://www.ti.com/lit/ds/snvs778e/snvs778e.pdf
@@ -18,14 +18,13 @@ Texas Instruments **LM317+LM337** for positive and negative rails
 
 ## Specifications
 * Voltage: Output voltage range adjustable from 1.25V to 37V
-* Ampere: 1.5A max
+* Ampere: ?
 * Outputs: 1
-* Dropout: n/a
+* Dropout: 3V
 * Quiescent current: n/a
 * PSSR: n/a
-* Package: SOT-223 or D2PAK−3
-* Form factor: smallest form factor
-* CASTELLATED-TH PCB
+* Package: 
+* Form factor: 
 
 ## Features
 * NPN Darlington output topology provides naturally low output impedance and an output capacitor is optional. 3V
