@@ -14,6 +14,7 @@ Texas Instruments **LM317+LM337** for positive and negative rails
 
 * http://www.ti.com/lit/ds/symlink/lm317.pdf
 * http://www.ti.com/lit/ds/snvs778e/snvs778e.pdf
+* https://www.onsemi.com/pub/Collateral/LM317-D.PDF
 
 ## Specifications
 * Voltage: Output voltage range adjustable from 1.25V to 37V
