@@ -155,10 +155,10 @@ Connection ~ 7150 3900
 Wire Wire Line
 	7150 3900 7300 3900
 $Comp
-L Device:CP C3
+L Device:CP C4
 U 1 1 5CD032FA
 P 5950 3650
-F 0 "C3" H 6068 3696 50  0000 L CNN
+F 0 "C4" H 6068 3696 50  0000 L CNN
 F 1 "10uF" H 6068 3605 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5988 3500 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/szlcsc/Samsung-Electro-Mechanics-CL31B106KAHNNNE_C14860.pdf" H 5950 3650 50  0001 C CNN
@@ -175,10 +175,10 @@ Wire Wire Line
 	5950 3500 5950 3450
 Connection ~ 5950 3450
 $Comp
-L dk_PMIC-Voltage-Regulators-Linear:LM317T U?
+L dk_PMIC-Voltage-Regulators-Linear:LM317T U1
 U 1 1 5CD0B04B
 P 5950 2900
-F 0 "U?" H 5950 3187 60  0000 C CNN
+F 0 "U1" H 5950 3187 60  0000 C CNN
 F 1 "LM317T" H 5950 3081 60  0000 C CNN
 F 2 "digikey-footprints:TO-220-3" H 6150 3100 60  0001 L CNN
 F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/group1/a0/db/e6/9b/6f/9c/45/7b/CD00000455/files/CD00000455.pdf/jcr:content/translations/en.CD00000455.pdf" H 6150 3200 60  0001 L CNN
