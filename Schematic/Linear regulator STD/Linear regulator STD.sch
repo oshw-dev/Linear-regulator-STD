@@ -13,26 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L dk_PMIC-Voltage-Regulators-Linear:LM317DCYR U1
-U 1 1 5CCEED29
-P 5950 2900
-F 0 "U1" H 5950 3187 60  0000 C CNN
-F 1 "LM317DCYR" H 5950 3081 60  0000 C CNN
-F 2 "digikey-footprints:SOT-223-4" H 6150 3100 60  0001 L CNN
-F 3 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flm317" H 6150 3200 60  0001 L CNN
-F 4 "296-12602-1-ND" H 6150 3300 60  0001 L CNN "Digi-Key_PN"
-F 5 "LM317DCYR" H 6150 3400 60  0001 L CNN "MPN"
-F 6 "Integrated Circuits (ICs)" H 6150 3500 60  0001 L CNN "Category"
-F 7 "PMIC - Voltage Regulators - Linear" H 6150 3600 60  0001 L CNN "Family"
-F 8 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flm317" H 6150 3700 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/texas-instruments/LM317DCYR/296-12602-1-ND/443738" H 6150 3800 60  0001 L CNN "DK_Detail_Page"
-F 10 "IC REG LIN POS ADJ 1.5A SOT223-4" H 6150 3900 60  0001 L CNN "Description"
-F 11 "Texas Instruments" H 6150 4000 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 6150 4100 60  0001 L CNN "Status"
-	1    5950 2900
-	1    0    0    -1  
-$EndComp
 Text Notes 5050 1950 0    50   ~ 0
 VO = ((R2 / R1) + 1) * 1.25\n\nhttps://github.com/oshw-dev/Linear-regulator-STD/wiki\n\n3.28V R1 = 240, R2 = 390\n5.04V R1 = 330, R2 = 1000\n11.83V R1 = 390, R2 = 3300\n
 $Comp
@@ -69,45 +49,32 @@ F 3 "" H 5950 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6250 3000 6350 3000
-Wire Wire Line
 	5950 3450 5950 3200
 $Comp
-L Device:C C1
+L Device:C C2
 U 1 1 5CCF7777
-P 5350 3350
-F 0 "C1" H 5465 3396 50  0000 L CNN
-F 1 "100nF" H 5465 3305 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5388 3200 50  0001 C CNN
-F 3 "~" H 5350 3350 50  0001 C CNN
-F 4 ">=50V" H 0   0   50  0001 C CNN "Description"
-	1    5350 3350
+P 5350 3400
+F 0 "C2" H 5465 3446 50  0000 L CNN
+F 1 "100nF" H 5465 3355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5388 3250 50  0001 C CNN
+F 3 "~" H 5350 3400 50  0001 C CNN
+F 4 ">=50V" H 0   50  50  0001 C CNN "Description"
+	1    5350 3400
 	1    0    0    -1  
 $EndComp
 Connection ~ 5950 3900
-Wire Wire Line
-	5000 2900 5350 2900
-Wire Wire Line
-	5350 3200 5350 2900
 Connection ~ 5350 2900
 Wire Wire Line
 	5350 2900 5650 2900
-Wire Wire Line
-	5000 3900 5350 3900
-Wire Wire Line
-	5350 3500 5350 3900
-Connection ~ 5350 3900
-Wire Wire Line
-	5350 3900 5950 3900
-Text Notes 5200 3700 1    50   ~ 0
+Text Notes 5800 3250 2    50   ~ 0
 place near LM317
 Text Label 7300 2900 0    50   ~ 0
 VOUT
-Text Label 4850 2900 0    50   ~ 0
+Text Label 4750 2900 0    50   ~ 0
 VIN
 Text Label 7300 3900 0    50   ~ 0
 GND
-Text Label 4850 3900 0    50   ~ 0
+Text Label 4750 3900 0    50   ~ 0
 GND
 $Comp
 L Device:D D1
@@ -141,8 +108,6 @@ Connection ~ 6350 3450
 Wire Wire Line
 	6350 3450 5950 3450
 Wire Wire Line
-	6350 3100 6350 3000
-Wire Wire Line
 	6250 2900 6350 2900
 Wire Wire Line
 	6850 3450 6850 3400
@@ -165,20 +130,17 @@ Wire Wire Line
 	6100 2350 6850 2350
 Wire Wire Line
 	6850 2900 6850 3100
-Wire Wire Line
-	6350 3000 6350 2900
-Connection ~ 6350 3000
 Connection ~ 6350 2900
 Wire Wire Line
 	6350 2900 6850 2900
 $Comp
-L Device:CP C2
+L Device:CP C3
 U 1 1 5CD0148C
 P 7150 3450
-F 0 "C2" H 7268 3496 50  0000 L CNN
-F 1 "47uF" H 7268 3405 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_6.3x5.8" H 7188 3300 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/PANASONIC-EEHZA1V470P_C178639.pdf" H 7150 3450 50  0001 C CNN
+F 0 "C3" H 7268 3496 50  0000 L CNN
+F 1 "22uF" H 7268 3405 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-15_AVX-H_Pad1.50x2.35mm_HandSolder" H 7188 3300 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/AVX-TAJB226K020RNJ_C7199.pdf" H 7150 3450 50  0001 C CNN
 	1    7150 3450
 	1    0    0    -1  
 $EndComp
@@ -198,8 +160,8 @@ U 1 1 5CD032FA
 P 5950 3650
 F 0 "C3" H 6068 3696 50  0000 L CNN
 F 1 "10uF" H 6068 3605 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_4x5.4" H 5988 3500 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/1901071210_PANASONIC-EEE1VA100WAR_C336731.pdf" H 5950 3650 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5988 3500 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Samsung-Electro-Mechanics-CL31B106KAHNNNE_C14860.pdf" H 5950 3650 50  0001 C CNN
 	1    5950 3650
 	1    0    0    -1  
 $EndComp
@@ -212,4 +174,58 @@ Wire Wire Line
 Wire Wire Line
 	5950 3500 5950 3450
 Connection ~ 5950 3450
+$Comp
+L dk_PMIC-Voltage-Regulators-Linear:LM317T U?
+U 1 1 5CD0B04B
+P 5950 2900
+F 0 "U?" H 5950 3187 60  0000 C CNN
+F 1 "LM317T" H 5950 3081 60  0000 C CNN
+F 2 "digikey-footprints:TO-220-3" H 6150 3100 60  0001 L CNN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/group1/a0/db/e6/9b/6f/9c/45/7b/CD00000455/files/CD00000455.pdf/jcr:content/translations/en.CD00000455.pdf" H 6150 3200 60  0001 L CNN
+F 4 "497-1575-5-ND" H 6150 3300 60  0001 L CNN "Digi-Key_PN"
+F 5 "LM317T" H 6150 3400 60  0001 L CNN "MPN"
+F 6 "Integrated Circuits (ICs)" H 6150 3500 60  0001 L CNN "Category"
+F 7 "PMIC - Voltage Regulators - Linear" H 6150 3600 60  0001 L CNN "Family"
+F 8 "http://www.st.com/content/ccc/resource/technical/document/datasheet/group1/a0/db/e6/9b/6f/9c/45/7b/CD00000455/files/CD00000455.pdf/jcr:content/translations/en.CD00000455.pdf" H 6150 3700 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/stmicroelectronics/LM317T/497-1575-5-ND/591677" H 6150 3800 60  0001 L CNN "DK_Detail_Page"
+F 10 "IC REG LIN POS ADJ 1.5A TO220AB" H 6150 3900 60  0001 L CNN "Description"
+F 11 "STMicroelectronics" H 6150 4000 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 6150 4100 60  0001 L CNN "Status"
+	1    5950 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 2900 6350 3100
+Wire Wire Line
+	5350 2900 5350 3250
+Wire Wire Line
+	5350 3550 5350 3900
+Connection ~ 5350 3900
+Wire Wire Line
+	5350 3900 5950 3900
+Wire Wire Line
+	4850 2900 4950 2900
+Wire Wire Line
+	4850 3900 4950 3900
+$Comp
+L Device:CP C1
+U 1 1 5CD11A37
+P 4950 3400
+F 0 "C1" H 5068 3446 50  0000 L CNN
+F 1 "22uF" H 5068 3355 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-15_AVX-H_Pad1.50x2.35mm_HandSolder" H 4988 3250 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/AVX-TAJB226K020RNJ_C7199.pdf" H 4950 3400 50  0001 C CNN
+	1    4950 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 3250 4950 2900
+Connection ~ 4950 2900
+Wire Wire Line
+	4950 2900 5350 2900
+Wire Wire Line
+	4950 3550 4950 3900
+Connection ~ 4950 3900
+Wire Wire Line
+	4950 3900 5350 3900
 $EndSCHEMATC
