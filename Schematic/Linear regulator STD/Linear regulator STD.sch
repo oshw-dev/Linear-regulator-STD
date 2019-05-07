@@ -71,11 +71,11 @@ Text Notes 5800 3250 2    50   ~ 0
 place near LM317
 Text Label 7300 2900 0    50   ~ 0
 VOUT
-Text Label 4750 2900 0    50   ~ 0
+Text Label 4850 2900 0    50   ~ 0
 VIN
 Text Label 7300 3900 0    50   ~ 0
 GND
-Text Label 4750 3900 0    50   ~ 0
+Text Label 4850 3900 0    50   ~ 0
 GND
 $Comp
 L Device:D D1
@@ -230,10 +230,10 @@ Connection ~ 4950 3900
 Wire Wire Line
 	4950 3900 5350 3900
 $Comp
-L Connector:Screw_Terminal_01x04 J?
+L Connector:Screw_Terminal_01x04 J1
 U 1 1 5CD1BDA5
 P 8700 3350
-F 0 "J?" H 8780 3342 50  0000 L CNN
+F 0 "J1" H 8780 3342 50  0000 L CNN
 F 1 "Screw_Terminal_01x04" H 8780 3251 50  0000 L CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 8700 3350 50  0001 C CNN
 F 3 "~" H 8700 3350 50  0001 C CNN
