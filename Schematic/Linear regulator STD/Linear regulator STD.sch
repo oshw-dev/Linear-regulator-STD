@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:Linear regulator STD-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -235,7 +234,7 @@ U 1 1 5CD1BDA5
 P 8700 3350
 F 0 "J1" H 8780 3342 50  0000 L CNN
 F 1 "Screw_Terminal_01x04" H 8780 3251 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 8700 3350 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 8700 3350 50  0001 C CNN
 F 3 "~" H 8700 3350 50  0001 C CNN
 	1    8700 3350
 	1    0    0    -1  
