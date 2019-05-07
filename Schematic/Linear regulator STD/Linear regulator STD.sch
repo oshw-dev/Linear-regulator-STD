@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Linear regulator STD-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -68,11 +69,11 @@ Wire Wire Line
 	5350 2900 5650 2900
 Text Notes 5800 3250 2    50   ~ 0
 place near LM317
-Text Label 7300 2900 0    50   ~ 0
+Text Label 8000 2900 0    50   ~ 0
 VOUT
 Text Label 4850 2900 0    50   ~ 0
 VIN
-Text Label 7300 3900 0    50   ~ 0
+Text Label 8000 3900 0    50   ~ 0
 GND
 Text Label 4850 3900 0    50   ~ 0
 GND
@@ -131,8 +132,6 @@ Wire Wire Line
 Wire Wire Line
 	6850 2900 6850 3100
 Connection ~ 6350 2900
-Wire Wire Line
-	6350 2900 6850 2900
 $Comp
 L Device:CP C3
 U 1 1 5CD0148C
@@ -146,14 +145,8 @@ F 3 "https://datasheet.lcsc.com/szlcsc/AVX-TAJB226K020RNJ_C7199.pdf" H 7150 3450
 $EndComp
 Wire Wire Line
 	7150 2900 7150 3300
-Connection ~ 7150 2900
-Wire Wire Line
-	7150 2900 7300 2900
 Wire Wire Line
 	7150 3600 7150 3900
-Connection ~ 7150 3900
-Wire Wire Line
-	7150 3900 7300 3900
 $Comp
 L Device:CP C4
 U 1 1 5CD032FA
@@ -231,28 +224,89 @@ Wire Wire Line
 $Comp
 L Connector:Screw_Terminal_01x04 J1
 U 1 1 5CD1BDA5
-P 8700 3350
-F 0 "J1" H 8780 3342 50  0000 L CNN
-F 1 "Screw_Terminal_01x04" H 8780 3251 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 8700 3350 50  0001 C CNN
-F 3 "~" H 8700 3350 50  0001 C CNN
-	1    8700 3350
+P 9750 3250
+F 0 "J1" H 9830 3242 50  0000 L CNN
+F 1 "Screw_Terminal_01x04" H 9830 3151 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm_OSHW:PinHeader_1x04_P2.54mm_Horizontal" H 9750 3250 50  0001 C CNN
+F 3 "~" H 9750 3250 50  0001 C CNN
+	1    9750 3250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8500 3250 8300 3250
+	9550 3150 9350 3150
 Wire Wire Line
-	8500 3350 8300 3350
+	9550 3250 9350 3250
 Wire Wire Line
-	8500 3450 8300 3450
+	9550 3350 9350 3350
 Wire Wire Line
-	8500 3550 8300 3550
-Text Label 8300 3250 0    50   ~ 0
+	9550 3450 9350 3450
+Text Label 9350 3150 0    50   ~ 0
 VIN
-Text Label 8300 3350 0    50   ~ 0
+Text Label 9350 3250 0    50   ~ 0
 GND
-Text Label 8300 3450 0    50   ~ 0
+Text Label 9350 3350 0    50   ~ 0
 GND
-Text Label 8300 3550 0    50   ~ 0
+Text Label 9350 3450 0    50   ~ 0
 VOUT
+$Comp
+L Device:R R3
+U 1 1 5CD27E16
+P 7650 3150
+F 0 "R3" H 7720 3196 50  0000 L CNN
+F 1 "560" H 7720 3105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 7580 3150 50  0001 C CNN
+F 3 "~" H 7650 3150 50  0001 C CNN
+	1    7650 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 2900 6850 2900
+Wire Wire Line
+	7150 2900 7650 2900
+Connection ~ 7150 2900
+Connection ~ 7150 3900
+Wire Wire Line
+	7150 3900 7650 3900
+Wire Wire Line
+	7650 2900 7650 3000
+Connection ~ 7650 2900
+Wire Wire Line
+	7650 2900 8000 2900
+Wire Wire Line
+	7650 3300 7650 3450
+Wire Wire Line
+	7650 3750 7650 3900
+Connection ~ 7650 3900
+Wire Wire Line
+	7650 3900 8000 3900
+Text Notes 7700 3000 0    50   ~ 0
+optional
+Wire Notes Line
+	8000 3000 8000 3800
+Wire Notes Line
+	8000 3800 7450 3800
+Wire Notes Line
+	7450 3800 7450 3000
+Wire Notes Line
+	7450 3000 8000 3000
+$Comp
+L dk_LED-Indication-Discrete:LG_L29K-G2J1-24-Z D3
+U 1 1 5CD349D8
+P 7650 3650
+F 0 "D3" V 7547 3828 60  0000 L CNN
+F 1 "LG_L29K-G2J1-24-Z" V 7653 3828 60  0000 L CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 7850 3850 60  0001 L CNN
+F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-2493945/LG%20L29K.pdf" H 7850 3950 60  0001 L CNN
+F 4 "475-2709-1-ND" H 7850 4050 60  0001 L CNN "Digi-Key_PN"
+F 5 "LG L29K-G2J1-24-Z" H 7850 4150 60  0001 L CNN "MPN"
+F 6 "Optoelectronics" H 7850 4250 60  0001 L CNN "Category"
+F 7 "LED Indication - Discrete" H 7850 4350 60  0001 L CNN "Family"
+F 8 "https://dammedia.osram.info/media/resource/hires/osram-dam-2493945/LG%20L29K.pdf" H 7850 4450 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/osram-opto-semiconductors-inc/LG-L29K-G2J1-24-Z/475-2709-1-ND/1938876" H 7850 4550 60  0001 L CNN "DK_Detail_Page"
+F 10 "LED GREEN DIFFUSED 0603 SMD" H 7850 4650 60  0001 L CNN "Description"
+F 11 "OSRAM Opto Semiconductors Inc." H 7850 4750 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 7850 4850 60  0001 L CNN "Status"
+	1    7650 3650
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
