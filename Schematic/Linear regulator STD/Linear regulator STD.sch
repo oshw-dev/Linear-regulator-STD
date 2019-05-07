@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Linear regulator STD-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -180,7 +181,7 @@ U 1 1 5CD0B04B
 P 5950 2900
 F 0 "U1" H 5950 3187 60  0000 C CNN
 F 1 "LM317T" H 5950 3081 60  0000 C CNN
-F 2 "digikey-footprints:TO-220-3" H 6150 3100 60  0001 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 6150 3100 60  0001 L CNN
 F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/group1/a0/db/e6/9b/6f/9c/45/7b/CD00000455/files/CD00000455.pdf/jcr:content/translations/en.CD00000455.pdf" H 6150 3200 60  0001 L CNN
 F 4 "497-1575-5-ND" H 6150 3300 60  0001 L CNN "Digi-Key_PN"
 F 5 "LM317T" H 6150 3400 60  0001 L CNN "MPN"
@@ -228,4 +229,31 @@ Wire Wire Line
 Connection ~ 4950 3900
 Wire Wire Line
 	4950 3900 5350 3900
+$Comp
+L Connector:Screw_Terminal_01x04 J?
+U 1 1 5CD1BDA5
+P 8700 3350
+F 0 "J?" H 8780 3342 50  0000 L CNN
+F 1 "Screw_Terminal_01x04" H 8780 3251 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 8700 3350 50  0001 C CNN
+F 3 "~" H 8700 3350 50  0001 C CNN
+	1    8700 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 3250 8300 3250
+Wire Wire Line
+	8500 3350 8300 3350
+Wire Wire Line
+	8500 3450 8300 3450
+Wire Wire Line
+	8500 3550 8300 3550
+Text Label 8300 3250 0    50   ~ 0
+VIN
+Text Label 8300 3350 0    50   ~ 0
+GND
+Text Label 8300 3450 0    50   ~ 0
+GND
+Text Label 8300 3550 0    50   ~ 0
+VOUT
 $EndSCHEMATC
